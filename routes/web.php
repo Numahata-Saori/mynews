@@ -26,7 +26,7 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function() {
      Route::post('profile/edit', 'Admin\ProfileController@update');
 });
 
-Route::get('XXX', 'AAAController@bbb');
+//Route::get('XXX', 'AAAController@bbb');
 
 Auth::routes();
 
