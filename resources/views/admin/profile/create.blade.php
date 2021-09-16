@@ -7,6 +7,10 @@
             <div class="col-md-8 mx-auto">
                 <h2>プロフィール作成</h2>
                 <form action="{{ action('Admin\ProfileController@create') }}" method="post" enctype="multipart/form-data">
+                    
+                    <a href="{{ action('Admin\ProfileController@index') }}" role="button" class="btn btn-primary">Myプロフィール一覧</a>
+                    
+                    <br><br>
 
                     @if (count($errors) > 0)
                         <ul>
