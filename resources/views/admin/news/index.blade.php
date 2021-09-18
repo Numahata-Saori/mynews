@@ -1,6 +1,11 @@
+{{--テンプレート（viewファイル）の継承（読み込み）をおこなうメソッド--}}
 @extends('layouts.admin')
+
+{{--@sectionは、名前が示す通りにコンテンツのセクションを定義--}}
+{{--「admin.blade.phpの@yield('title')に'ニュースの新規作成'を埋め込む」が動作--}}
 @section('title', '登録済みニュースの一覧')
 
+{{--「admin.blade.phpの@yield('content')に以下のタグを埋め込む」という動作--}}
 @section('content')
     <div class="container">
         <div class="row">
@@ -38,9 +43,13 @@
                             </tr>
                         </thead>
                         <tbody>
+                            
+                            {{--@foreach を使って取得したデータの一つ一つを処理し、各データの idと名前、メールアドレスを表示--}}、
                             @foreach($posts as $news)
                                 <tr>
                                     <th>{{ $news->id }}</th>
+                                    
+                                    {{--\Str::limit()は、文字列を指定した数値で切り詰めるというメソッド、切り詰める文字の数は半角で認識する--}}
                                     <td>{{ str_limit($news->title, 100) }}</td>
                                     <td>{{ str_limit($news->body, 250) }}</td>
                                     <td>

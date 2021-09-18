@@ -4,12 +4,12 @@
         <meta charset="utf-8">
         
         {{--{{}}で囲まれたコードは、PHPで書かれた内容を表示するという意味、{{}}の中身を文字列に置換し、HTMLの中に記載する--}}
-        {{--「@◯◯」という記載のところは、メソッドを読み込んでいる-->
+        {{--「@◯◯」という記載のところは、メソッドを読み込んでいる--}}
         
         {{--windowsの基本ブラウザであるedgeに対応するという記載--}}
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         
-        {{--画面幅を小さくしたとき、たとえばスマートフォンで見たときなどに文字や画像の大きさを調整してくれるタグ-->
+        {{--画面幅を小さくしたとき、たとえばスマートフォンで見たときなどに文字や画像の大きさを調整してくれるタグ--}}
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <!-- CSRF Token -->
@@ -37,11 +37,10 @@
 
         <!-- Styles -->
         
-        {{-- Laravel標準で用意されているCSSを読み込みます --}}
-        <link href="{{ secure_asset('css/app.css') }}" rel="stylesheet">
+        <link href="{{ asset('css/app.css') }}" rel="stylesheet">
         
-        {{-- この章の後半で作成するCSSを読み込みます --}}
-        <link href="{{ secure_asset('css/admin.css') }}" rel="stylesheet">
+        <link href="{{ asset('css/front.css') }}" rel="stylesheet">
+        
     </head>
     
     <body>
