@@ -24,7 +24,7 @@
                                         {{--現在のURLのスキーマ（httpかhttps）を使い、アセットへのURLを生成するメソッド--}}
                                         {{--$headline->image_pathは、保存した画像のファイル名--}}
                                         {{--「.」は文字列を結合する結合演算子と呼ばれるもの、画像のパスを返している--}}
-                                        <img src="{{ asset('storage/image/' . $headline->image_path) }}">
+                                        <img src="{{ $headline->image_path }}">
                                     @endif
                                 </div>
                                 
@@ -75,7 +75,7 @@
                             
                             <div class="image col-md-6 text-right mt-4">
                                 @if ($post->image_path)
-                                    <img src="{{ asset('storage/image/' . $post->image_path) }}">
+                                    <img src="{{ $post->image_path }}">
                                 @endif
                             </div>
                             
