@@ -3,6 +3,7 @@
 
 {{--@sectionは、名前が示す通りにコンテンツのセクションを定義--}}
 @section('content')
+<h1>NEWSサイト</h1>
     <div class="container">
         <hr color="#c0c0c0">
         
